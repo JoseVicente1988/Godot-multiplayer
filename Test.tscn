@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://de1qmb5o85wid"]
+
+[ext_resource type="Script" path="res://TestScript.gd" id="1_x47nr"]
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x47nr")
+
+[node name="ClienteButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 72.0
+offset_right = 279.0
+offset_bottom = 110.0
+text = "Cliente"
+
+[node name="ServerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 120.0
+offset_right = 279.0
+offset_bottom = 157.0
+text = "Servidor"
+
+[connection signal="pressed" from="ClienteButton" to="." method="_on_cliente_button_pressed"]
+[connection signal="pressed" from="ServerButton" to="." method="_on_server_button_pressed"]
